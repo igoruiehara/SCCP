@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resumo diário — La Baguette</title>
+  <link rel="stylesheet" href="../style/main_menu.css">
+</head>
+<body>
+
+
+  <aside class="menu">
+    <p class="menu-titulo">Navegação</p>
+    <a href="../telas/main_menu.html" class="ativo">Início</a>
+    <a href="#"> Dashboard Detalhado</a>
+    <a href="#"> Estoque</a>
+    <a href="#"> Relatórios</a>
+    <a href="#"> Balcão</a>
+    <a href="#"> Caixa</a>
+    <a href="../telas/cadastros.html">Cadastros</a>
+    <p class="menu-rodape">La Baguette</p>
+  </aside>
+
+  <div class="conteudo">
+
+    <!-- TOPO -->
+    <header class="topo">
+      <div class="topo-esq">
+        <img src="../images/logo.png" alt="La Baguette" class="topo-logo">
+        <a href="#" class="botao-menu">Menu principal</a>
+        <h2>Início</h2>
+      </div>
+      <div class="topo-dir">
+        <small>Demonstração</small>
+        <strong>Admin</strong>
+        <span class="avatar">?</span>
+        <a href="../telas/login.html" class="sair" title="Sair">⎋</a>
+      </div>
+    </header>
+
+    <main class="pagina">
+
+      <!-- DATA -->
+      <section class="hero">
+        <p class="etiqueta">✦ Painel do dia</p>
+        <h1 id="data"></h1>
+      </section>
+
+      <!-- CARTÕES -->
+      <section class="cartoes">
+        <div class="cartao escuro">
+          <p class="etiqueta">Vendas realizadas hoje</p>
+          <p class="valor">0</p>
+        </div>
+        <div class="cartao">
+          <p class="etiqueta">Vendas de hoje</p>
+          <p class="valor">R$ 0,00</p>
+          <p class="sub">0 vendas</p>
+        </div>
+        <div class="cartao">
+          <p class="etiqueta">Ticket médio</p>
+          <p class="valor">R$ 0,00</p>
+          <p class="sub">por venda</p>
+        </div>
+      </section>
+
+      <!-- GRÁFICOS -->
+      <section class="linha">
+        <div class="caixa grande">
+          <p class="etiqueta">Hoje</p>
+          <h3>Vendas por hora</h3>
+          <div class="grafico" id="grafico-hora">
+            <p class="vazio">Sem dados para exibir</p>
+          </div>
+          <div class="eixo-x" id="eixo-hora"></div>
+        </div>
+
+        <div class="caixa">
+          <p class="etiqueta">Top 5</p>
+          <h3>Produtos mais vendidos</h3>
+          <div class="rosca"><span>Sem dados</span></div>
+        </div>
+      </section>
+
+      <section class="caixa">
+        <p class="etiqueta">Movimento</p>
+        <h3>Movimento de vendas</h3>
+        <p class="sub">Vendas concluídas por hora — 0 no total hoje</p>
+        <div class="grafico" id="grafico-mov">
+          <p class="vazio">Sem dados para exibir</p>
+        </div>
+        <div class="eixo-x" id="eixo-mov"></div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="painel.js"></script>
+</body>
+</html>

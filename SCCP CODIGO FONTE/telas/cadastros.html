@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cadastros — La Baguette</title>
+  <link rel="stylesheet" href="../style/main_menu.css">
+  <link rel="stylesheet" href="../style/cadastros.css">
+  <script src="../src/cadastros.js" defer></script>
+</head>
+<body>
+
+  <aside class="menu">
+    <p class="menu-titulo">Navegação</p>
+    <a href="../telas/main_menu.html">Início</a>
+    <a href="#"> Dashboard Detalhado</a>
+    <a href="#"> Estoque</a>
+    <a href="#"> Relatórios</a>
+    <a href="#"> Balcão</a>
+    <a href="#"> Caixa</a>
+    <a href="../telas/cadastros.html" class="ativo">Cadastros</a>
+    <p class="menu-rodape">La Baguette</p>
+  </aside>
+
+  <div class="conteudo">
+
+    <!-- TOPO -->
+    <header class="topo">
+      <div class="topo-esq">
+        <img src="../images/logo.png" alt="La Baguette" class="topo-logo">
+        <a href="../telas/main_menu.html" class="botao-menu">Menu principal</a>
+        <h2>Cadastros</h2>
+      </div>
+      <div class="topo-dir">
+        <small>Demonstração</small>
+        <strong>Admin</strong>
+        <span class="avatar">?</span>
+        <a href="../telas/login.html" class="sair" title="Sair">⎋</a>
+      </div>
+    </header>
+
+    <main class="pagina">
+
+      <!-- ABAS -->
+      <nav class="abas" id="abas" role="tablist" aria-label="Tipos de cadastro">
+        <button type="button" class="aba ativa" role="tab" data-aba="clientes">Clientes <span class="contagem" id="cont-clientes">0</span></button>
+        <button type="button" class="aba" role="tab" data-aba="fornecedores">Fornecedores <span class="contagem" id="cont-fornecedores">0</span></button>
+        <button type="button" class="aba" role="tab" data-aba="produtos">Produtos <span class="contagem" id="cont-produtos">0</span></button>
+      </nav>
+
+      <!-- LISTA -->
+      <section class="caixa">
+        <div class="barra">
+          <div>
+            <p class="etiqueta" id="lista-etiqueta">Cadastro</p>
+            <h3 id="lista-titulo">Clientes</h3>
+          </div>
+          <div class="barra-acoes">
+            <input type="search" id="busca" class="busca" placeholder="Buscar..." aria-label="Buscar">
+            <button type="button" id="btn-novo" class="botao botao-ouro">+ Novo cliente</button>
+          </div>
+        </div>
+
+        <div class="tabela-wrap">
+          <table class="tabela">
+            <thead id="tabela-cabecalho"></thead>
+            <tbody id="tabela-corpo"></tbody>
+          </table>
+        </div>
+        <p class="vazio-lista" id="vazio" hidden></p>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- FORMULÁRIO -->
+  <dialog id="modal" class="modal">
+    <form id="form-cadastro" novalidate>
+      <header class="modal-topo">
+        <h3 id="modal-titulo">Novo cliente</h3>
+        <button type="button" class="modal-fechar" id="modal-fechar" aria-label="Fechar">✕</button>
+      </header>
+      <div class="modal-corpo">
+        <div class="grade-form" id="campos"></div>
+        <p id="form-erro" class="form-erro" role="alert"></p>
+      </div>
+      <footer class="modal-rodape">
+        <button type="button" class="botao botao-contorno" id="btn-cancelar">Cancelar</button>
+        <button type="submit" class="botao botao-escuro">Salvar</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <div class="aviso" id="aviso" role="status" aria-live="polite"></div>
+
+</body>
+</html>

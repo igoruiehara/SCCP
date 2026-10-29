@@ -1,0 +1,166 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f6f3;
+  color: #1b1a17;
+}
+
+/* MENU LATERAL */
+.menu {
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  width: 216px;
+  padding: 16px 10px;
+  background: #1b1a17;
+}
+.menu-titulo, .menu-rodape {
+  margin: 0 0 14px 10px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #8a867c;
+}
+.menu a {
+  display: block;
+  margin-bottom: 4px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.menu a:hover { background: #2c2a26; }
+.menu a.ativo { background: #2c2a26; border-left: 3px solid #c9a24b; }
+.menu-rodape { position: absolute; bottom: 8px; margin: 0; }
+
+/* TOPO */
+.conteudo { margin-left: 216px; }
+
+.topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 24px;
+  background: white;
+  border-bottom: 1px solid #e5e2db;
+}
+.topo-esq, .topo-dir { display: flex; align-items: center; gap: 12px; }
+.topo-logo { height: 36px; }
+.topo h2 { margin: 0; font-family: Georgia, serif; font-size: 22px; }
+.botao-menu {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  color: #1b1a17;
+  font-size: 12px;
+  text-decoration: none;
+}
+.topo-dir small { color: #6b675f; font-size: 11px; }
+.avatar {
+  width: 34px; height: 34px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  background: #8f6f1f;
+  color: white;
+  font-weight: bold;
+}
+.sair { color: #1b1a17; font-size: 20px; text-decoration: none; }
+
+/* PÁGINA */
+.pagina { padding: 22px 24px; }
+
+.etiqueta {
+  margin: 0 0 6px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #8a867c;
+}
+
+.hero {
+  margin-bottom: 16px;
+  padding: 22px 26px;
+  background: #1b1a17;
+  border-radius: 12px;
+  color: white;
+}
+.hero h1 { margin: 0; font-family: Georgia, serif; font-size: 40px; }
+
+/* CARTÕES */
+.cartoes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 16px;
+}
+.cartao {
+  padding: 18px;
+  background: white;
+  border: 1px solid #e5e2db;
+  border-radius: 12px;
+}
+.cartao.escuro { background: #1b1a17; color: white; border: 0; }
+.valor { margin: 6px 0; font-family: Georgia, serif; font-size: 34px; font-weight: bold; }
+.sub { margin: 0; font-size: 12px; color: #6b675f; }
+
+/* CAIXAS E GRÁFICOS */
+.linha {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+.caixa {
+  padding: 18px;
+  background: white;
+  border: 1px solid #e5e2db;
+  border-radius: 12px;
+}
+.caixa h3 { margin: 0 0 12px; font-family: Georgia, serif; font-size: 20px; }
+
+.grafico {
+  position: relative;
+  height: 180px;
+  margin-top: 12px;
+  border-bottom: 1px solid #1b1a17;
+  background: repeating-linear-gradient(to bottom, #eee 0, #eee 1px, transparent 1px, transparent 45px);
+}
+.vazio {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  color: #8a867c;
+  font-size: 14px;
+}
+
+.eixo-x {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+  font-size: 10px;
+  color: #6b675f;
+}
+
+.rosca {
+  width: 150px; height: 150px;
+  margin: 20px auto 0;
+  display: flex; align-items: center; justify-content: center;
+  border: 22px solid #eee;
+  border-radius: 50%;
+  color: #8a867c;
+  font-size: 12px;
+}
+.rosca span { text-align: center; }
+
+@media (max-width: 900px) {
+  .menu { display: none; }
+  .conteudo { margin-left: 0; }
+  .cartoes, .linha { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 28px; }
+}
